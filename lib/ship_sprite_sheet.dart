@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 
-class GameSpriteSheet {
+class ShipSpriteSheet {
   static Future<SpriteAnimation> get shipIdLeft => SpriteAnimation.load(
         'shipT.png', //caminho png ship
         SpriteAnimationData.sequenced(
