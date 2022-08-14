@@ -2,6 +2,7 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:test1/decorations/chess.dart';
+import 'package:test1/decorations/indiasfinal.dart';
 import 'package:test1/katrina.dart';
 import 'package:test1/redemoinho.dart';
 import 'package:test1/ship.dart';
@@ -58,14 +59,16 @@ class MyHomePage extends StatelessWidget {
           'redemoinho':(properties) => Redemoinho(properties.position),
           'turquia':(properties) => Turquia(properties.position),
           'chess':(properties) => Chess(properties.position),
+          'indiasFinal':(properties) => IndiasFinal(properties.position),
         },
         forceTileSize: Size(tilesize, tilesize),
       ),
       player: GameShip(
-        Vector2(12 * tilesize, 23 * tilesize),
+        Vector2(24 * tilesize, 37 * tilesize),
         //Vector2(3 * tilesize, 1 * tilesize),
       ),
       cameraConfig: CameraConfig(
+        smoothCameraSpeed: 5,
         smoothCameraEnabled: true,
         moveOnlyMapArea: true,
         zoom: 2,
@@ -73,6 +76,7 @@ class MyHomePage extends StatelessWidget {
 
 
       showCollisionArea: true,
+      
     );
   }
 }

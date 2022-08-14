@@ -1,9 +1,11 @@
-import 'dart:ui';
+import 'dart:math';
 
 import 'package:bonfire/bonfire.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:test1/ship_sprite_sheet.dart';
 
-class GameShip extends SimplePlayer with ObjectCollision {
+class GameShip extends SimplePlayer with ObjectCollision, TapGesture
+ {
   GameShip(Vector2 position)
       : super(
           size: Vector2(40, 40),
@@ -29,11 +31,58 @@ class GameShip extends SimplePlayer with ObjectCollision {
     ]));
 
   }
+  void onTap(){
+    TalkDialog.show(context, [
+      Say(text:[TextSpan(text: 'Ola! sou o navegador Vasco da Gama, me ajude a descobrir novas terras e rotas!'),],person: ShipSpriteSheet.shipIdRight.asWidget()),
+    ]);
+  }
 
   @override
   void die(){
+    //aleatorio
+    int morteDialog = Random().nextInt(5);
+    while(morteDialog == 0){
+      morteDialog = Random().nextInt(5);
+    }
+
+    switch(morteDialog) { 
+      case 1: {
+          TalkDialog.show(context, [
+            Say(text:[TextSpan(text: 'Sabe que quantas naus esta viagem\nQue tu fazes, fizerem, de atrevidas,\nInimiga terão esta paragem,\nCom ventos e tormentas desmedidas!'),],person: ShipSpriteSheet.shipIdRight.asWidget()),
+          ]);
+        
+        } 
+      break; 
+     
+      case 2: {  
+          TalkDialog.show(context, [
+            Say(text:[TextSpan(text: 'Porém já cinco sóis eram passados\nQue dali nos partíramos, cortando\nOs mares nunca doutrem navegados,\nProsperamente os ventos assoprando,\nQuando uma noite, estando descuidados\nNa cortadora proa vigiando,\nUma nuvem, que os ares escurece,\nSobre nossas cabeças aparece.'),],person: ShipSpriteSheet.shipIdRight.asWidget()),
+          ]); 
+        } 
+      break; 
+     
+      case 3: {  
+        TalkDialog.show(context, [
+          Say(text:[TextSpan(text: 'Caixas podem restaurar o Navio!'),],person: ShipSpriteSheet.shipIdRight.asWidget()),
+        ]);
+      } 
+      break; 
+     
+      
+      default: { 
+        TalkDialog.show(context, [
+          Say(text:[TextSpan(text: 'Vamos Navegar!'),],person: ShipSpriteSheet.shipIdRight.asWidget()),
+        ]);
+        } 
+      break; 
+   } 
+
+    print(morteDialog);
     removeFromParent();
     super.die();
+
+    //comando para voltar do 0
+    
   }
 
   @override
@@ -47,11 +96,8 @@ class GameShip extends SimplePlayer with ObjectCollision {
       );
       super.render(canvas);
   }
-/*
-  @override
-  void receiveDamage(double damage, int from){
-    super.receiveDamage(damage, from);
-  }
-*/
+
+
+
 }
 

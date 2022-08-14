@@ -142,50 +142,6 @@
                  "width":16,
                  "x":602.666666666667,
                  "y":584
-                }, 
-                {
-                 "class":"",
-                 "height":16,
-                 "id":8,
-                 "name":"chess",
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":194,
-                 "y":353.666666666667
-                }, 
-                {
-                 "class":"",
-                 "height":16,
-                 "id":14,
-                 "name":"chess",
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":208,
-                 "y":176
-                }, 
-                {
-                 "class":"",
-                 "height":16,
-                 "id":15,
-                 "name":"chess",
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":494.666666666667,
-                 "y":272
-                }, 
-                {
-                 "class":"",
-                 "height":10,
-                 "id":16,
-                 "name":"indiasFinal",
-                 "rotation":0,
-                 "visible":true,
-                 "width":10,
-                 "x":267,
-                 "y":610
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -194,7 +150,7 @@
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":17,
+ "nextobjectid":8,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.1",
