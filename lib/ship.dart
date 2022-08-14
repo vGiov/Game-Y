@@ -47,6 +47,11 @@ class GameShip extends SimplePlayer with ObjectCollision {
       );
       super.render(canvas);
   }
-
+/*
+  @override
+  void receiveDamage(double damage, int from){
+    super.receiveDamage(damage, from);
+  }
+*/
 }
 
