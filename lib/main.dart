@@ -64,7 +64,7 @@ class MyHomePage extends StatelessWidget {
         forceTileSize: Size(tilesize, tilesize),
       ),
       player: GameShip(
-        Vector2(24 * tilesize, 37 * tilesize),
+        Vector2(1 * tilesize, 2 * tilesize),
         //Vector2(3 * tilesize, 1 * tilesize),
       ),
       cameraConfig: CameraConfig(
@@ -75,7 +75,7 @@ class MyHomePage extends StatelessWidget {
       ),
 
 
-      showCollisionArea: true,
+      //showCollisionArea: true,
       
     );
   }

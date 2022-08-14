@@ -77,7 +77,6 @@ class GameShip extends SimplePlayer with ObjectCollision, TapGesture
       break; 
    } 
 
-    print(morteDialog);
     removeFromParent();
     super.die();
 
